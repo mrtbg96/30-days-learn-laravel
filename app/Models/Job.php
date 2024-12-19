@@ -2,48 +2,33 @@
 
 namespace App\Models;
 
-use Illuminate\Support\Arr;
+use Illuminate\Database\Eloquent\Model;
 
-class Job {
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
-    public static function all(): array
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
+
+class Job extends Model {
+    
+    use HasFactory;
+    
+    protected $table = 'job_listings';
+
+    protected $fillable = [
+        'employer_id',
+        'title',
+        'description',
+        'salary'
+    ];
+
+    public function employer(): BelongsTo
     {
-        return [
-            [
-                'id' => 1,
-                'title' => 'Software Team Lead',
-                'description' => 'Lead, mentor, and manage a team of software developers, fostering a collaborative and productive work environment.',
-                'salary' => '$60.000'
-            ],
-            [
-                'id' => 2,
-                'title' => 'Full Stack Developer',
-                'description' => 'Design, develop, and maintain web and mobile applications with robust front-end and back-end functionality.',
-                'salary' => '$40.000'
-            ],
-            [
-                'id' => 3,
-                'title' => 'Backend Developer',
-                'description' => 'Design, develop, and maintain backend services, APIs, and microservices. Implement server-side logic to ensure high performance, responsiveness, and reliability.',
-                'salary' => '$35.000'
-            ],
-            [
-                'id' => 4,
-                'title' => 'Data Analyst',
-                'description' => 'Gather, clean, and validate data from various sources to ensure accuracy and completeness.',
-                'salary' => '$30.000'
-            ]
-        ];
+        return $this->belongsTo(Employer::class);
     }
 
-    public static function find(int $id): array
+    public function tags(): BelongsToMany
     {
-        $job = Arr::first(static::all(), fn($job) => $job['id'] == $id);
-
-        if (! $job) {
-            abort(404);
-        }
-
-        return $job;
+        return $this->belongsToMany(Tag::class, foreignPivotKey: 'job_listing_id');
     }
 }
