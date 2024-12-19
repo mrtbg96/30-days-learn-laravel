@@ -17,3 +17,13 @@ This is a Laravel course by Jeffrey from Laracasts
 #### Day 6: View Data and Route Wildcards
 
 #### Day 7: Autoloading, Namespaces and Models
+
+#### Day 8: Introduction to Migrations
+
+#### Day 9: Meet Eloquent
+
+#### Day 10: Model Factories
+
+#### Day 11: Two Key Eloquent Relationship Types
+
+#### Day 12: Pivot Tables and BelongsToMany Relationships
