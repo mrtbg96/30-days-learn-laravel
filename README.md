@@ -27,3 +27,9 @@ This is a Laravel course by Jeffrey from Laracasts
 #### Day 11: Two Key Eloquent Relationship Types
 
 #### Day 12: Pivot Tables and BelongsToMany Relationships
+
+#### Day 13: Eager Loading and the N+1 Problem
+
+#### Day 14: All You Need to Know About Pagination
+
+#### Day 15: Understanding Database Seeders
