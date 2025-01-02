@@ -33,3 +33,11 @@ This is a Laravel course by Jeffrey from Laracasts
 #### Day 14: All You Need to Know About Pagination
 
 #### Day 15: Understanding Database Seeders
+
+#### Day 16: Forms and CSRF Explained (with Examples)
+
+#### Day 17: Always Validate. Never Trust the User.
+
+#### Day 18: Editing, Updating, and Deleting a Resource
+
+#### Day 19: Routes Reloaded - 6 Essential Tips
