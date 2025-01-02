@@ -23,7 +23,7 @@
                     </p>
                 </div>
                 <div>
-                    <a href="/jobs/{{ $job->id }}"
+                    <a href="{{ route('jobs.show', $job) }}"
                         class="bg-gray-900 rounded-md px-3 py-2 font-medium text-sm text-white hover:bg-gray-800">
                         See Job
                     </a>

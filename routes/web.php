@@ -5,6 +5,8 @@ use App\Models\Tag;
 use App\Models\User;
 use App\Models\Employer;
 
+use App\Http\Controllers\JobController;
+
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -23,24 +25,10 @@ Route::get('/', function () {
     return view('home', [
         'counts' => $counts
     ]);
-});
+})->name('home');
 
-Route::get('/jobs', function () {
-    $jobs = Job::with('employer')->simplePaginate(6);
-
-    return view('jobs', [
-        'jobs' => $jobs
-    ]);
-});
-
-Route::get('/jobs/{id}', function ($id) {
-    $job = Job::find($id);
-
-    return view('job', [
-        'job' => $job
-    ]);
-});
+Route::resource('jobs', JobController::class);
 
 Route::get('/contact', function () {
     return view('contact');
-});
+})->name('contact');
