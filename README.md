@@ -41,3 +41,11 @@ This is a Laravel course by Jeffrey from Laracasts
 #### Day 18: Editing, Updating, and Deleting a Resource
 
 #### Day 19: Routes Reloaded - 6 Essential Tips
+
+#### Day 20: Starter Kits, Breeze, and Middleware
+
+#### Day 21: Make a Login and Registration System From Scratch: Part 1
+
+#### Day 22: Make a Login and Registration System From Scratch: Part 2
+
+#### Day 23: 6 Steps to Authorization Mastery
