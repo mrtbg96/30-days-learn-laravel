@@ -23,22 +23,24 @@
                     </dd>
                 </div>
             </dl>
-            <div class="mt-6 flex">
-                <a href="{{ route('jobs.edit', $job) }}"
-                    class="rounded-md bg-gray-900 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-gray-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-700">
-                    Edit
-                </a>
-                <form method="POST" action="{{ route('jobs.destroy', $job) }}" class="ms-4">
-                    @csrf
+            @can('edit', $job)
+                <div class="mt-6 flex">
+                    <a href="{{ route('jobs.edit', $job) }}"
+                        class="rounded-md bg-gray-900 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-gray-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-700">
+                        Edit
+                    </a>
+                    <form method="POST" action="{{ route('jobs.destroy', $job) }}" class="ms-4">
+                        @csrf
 
-                    @method('DELETE')
+                        @method('DELETE')
 
-                    <button type="submit"
-                        class="rounded-md bg-red-500 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-red-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600">
-                        Delete
-                    </button>
-                </form>
-            </div>
+                        <button type="submit"
+                            class="rounded-md bg-red-500 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-red-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600">
+                            Delete
+                        </button>
+                    </form>
+                </div>
+            @endcan
         </div>
     </div>
 
