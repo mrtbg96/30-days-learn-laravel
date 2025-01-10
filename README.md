@@ -49,3 +49,9 @@ This is a Laravel course by Jeffrey from Laracasts
 #### Day 22: Make a Login and Registration System From Scratch: Part 2
 
 #### Day 23: 6 Steps to Authorization Mastery
+
+#### Day 24: How to Preview and Send Email Using Mailable Classes
+
+#### Day 25: Queues Are Easier Than You Think
+
+#### Day 26: Get Your Build Process in Order
