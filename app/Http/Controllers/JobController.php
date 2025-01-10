@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Job;
 
+use App\Jobs\SendJobPostedMail;
+
 use Illuminate\View\View;
 
 use Illuminate\Http\RedirectResponse;
@@ -41,12 +43,14 @@ class JobController extends Controller
             'salary' => ['required']
         ]);
 
-        Job::create([
+        $job = Job::create([
             'employer_id' => 1,
             'title' => request('title'),
             'description' => request('description'),
             'salary' => request('salary')
         ]);
+
+        SendJobPostedMail::dispatch($job);
 
         return redirect()
             ->route('jobs.index')
