@@ -55,3 +55,14 @@ This is a Laravel course by Jeffrey from Laracasts
 #### Day 25: Queues Are Easier Than You Think
 
 #### Day 26: Get Your Build Process in Order
+
+#### Day 27: From Design to Blade
+
+#### Day 28: Blade and Tailwind Techniques for Your Laravel Views
+
+#### Day 29: Jobs, Tags, TDD, Oh My!
+
+#### Day 30: The Everything Episode
+
+**NOTE:**
+To check the Day 27, 28, 29 & 30 episodes' work, please click [here](https://github.com/mrtbg96/jobify).
